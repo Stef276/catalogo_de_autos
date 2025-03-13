@@ -77,8 +77,6 @@ nav {
         display: block; /* Muestra el menú cuando tiene la clase 'show' */
     }
 }
-
-
 /* Encabezado */
 header {
     background-color: #2c2c2c;
