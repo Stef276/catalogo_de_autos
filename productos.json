@@ -1,0 +1,58 @@
+{
+    "limpiezaInterior": [
+        {
+            "nombre": "Limpiador Multiuso",
+            "descripcion": "Elimina manchas y suciedad en interiores.",
+            "precio": "$500",
+            "imagen": "./img/limpiador_multiuso.jpg"
+        },
+        {
+            "nombre": "Aspiradora Portátil",
+            "descripcion": "Compacta y potente para limpiar alfombras y tapizados.",
+            "precio": "$3500",
+            "imagen": "./img/aspiradora.jpg"
+        }
+    ],
+    "cuidadoExterior": [
+        {
+            "nombre": "Cera para Autos",
+            "descripcion": "Brillo intenso y protección duradera.",
+            "precio": "$800",
+            "imagen": "./img/cera_autos.jpg"
+        },
+        {
+            "nombre": "Shampoo Concentrado",
+            "descripcion": "Limpieza profunda con alto poder desengrasante.",
+            "precio": "$650",
+            "imagen": "./img/shampoo.jpg"
+        }
+    ],
+    "productosGenerales": [
+        {
+            "nombre": "Ambientador de Autos",
+            "descripcion": "Deja tu vehículo con un aroma fresco.",
+            "precio": "$150",
+            "imagen": "./img/ambientador.jpg"
+        },
+        {
+            "nombre": "Guantes de Protección",
+            "descripcion": "Guantes resistentes para manejar productos de limpieza.",
+            "precio": "$120",
+            "imagen": "./img/guantes.jpg"
+        }
+    ],
+    "accesoriosVehiculo": [
+        {
+            "nombre": "Soporte para Teléfono",
+            "descripcion": "Soporte ajustable para mantener tu teléfono seguro mientras conduces.",
+            "precio": "$300",
+            "imagen": "./img/soporte_telefono.jpg"
+        },
+        {
+            "nombre": "Funda de Asiento",
+            "descripcion": "Protege los asientos de tu coche con estas fundas de alta calidad.",
+            "precio": "$500",
+            "imagen": "./img/funda_asiento.jpg"
+        }
+    ]
+}

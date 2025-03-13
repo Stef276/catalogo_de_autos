@@ -1,0 +1,235 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9b59b6; /* Violeta */
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    width: 30px;
+    height: 21px;
+    justify-content: space-between;
+}
+
+.menu-hamburguesa .barra {
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #9b59b6; /* Violeta */
+}
+
+/* Menu hamburguesa en dispositivos pequeños */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 10;
+    }
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Encabezado */
+header {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    text-align: center;
+}
+header h1 {
+    color: #9b59b6;
+    font-size: 2.5rem;
+}
+
+/* Sección de catálogo */
+#catalogo h2 {
+    text-align: center;
+    color: #9b59b6;
+    margin-top: 1.5rem;
+}
+.categoria {
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 8px;
+    width: 80%;
+}
+.categoria h3 {
+    color: #9b59b6;
+    margin-bottom: 0.5rem;
+}
+
+/* Productos */
+.producto {
+    background-color: #333;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.producto-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .categoria {
+        width: 95%;
+    }
+    .producto {
+        margin: 1rem auto;
+        width: 90%;
+    }
+}
+/* Estilo para la sección de contacto */
+.contacto {
+    text-align: center; /* Centra el texto */
+    margin-top: 50px; /* Espaciado superior */
+}
+
+.contacto h2 {
+    font-size: 2.5rem; /* Aumentar el tamaño del título */
+    color: #9b59b6;
+}
+
+.contacto p {
+    font-size: 1.5rem; /* Aumentar el tamaño del texto */
+    color: #e0e0e0;
+}
+
+.contacto a {
+    color: #9b59b6; /* Color para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+.contacto i {
+    margin-left: 10px; /* Espaciado entre el texto y el icono */
+}
+
+/* Estilo para la sección de productos */
+#producto-actual {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#producto-actual h2 {
+    font-size: 2.5rem;
+    color: #9b59b6;
+}
+
+.producto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.producto-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.producto-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto-descripcion {
+    flex: 1;
+    padding: 1rem;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+.producto-descripcion h3 {
+    font-size: 2rem;
+    color: #9b59b6;
+    margin-bottom: 1rem;
+}
+
+.producto-descripcion p {
+    font-size: 1.2rem;
+}
+
+.producto-descripcion strong {
+    font-weight: bold;
+}
