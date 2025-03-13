@@ -10,17 +10,23 @@ body {
 /* Estilo para el menú hamburguesa */
 nav {
     position: relative;
+    background-color: #2c2c2c; /* Fondo gris para pantallas grandes */
 }
 
 .menu-toggle {
-    display: none; /* Ocultamos el menú hamburguesa en pantallas grandes */
+    display: none; /* Ocultamos el botón hamburguesa en pantallas grandes */
     cursor: pointer;
     padding: 10px;
     background-color: #333;
     border-radius: 5px;
+    position: fixed; /* Fijamos el botón en la parte superior */
+    top: 15px; /* Ajusta según sea necesario */
+    right: 15px; /* Colocamos el botón a la derecha */
+    z-index: 100;
+    margin: 0;
 }
 
-.menu-toggle .bar {
+.menu-toggle .barra {
     display: block;
     width: 25px;
     height: 3px;
@@ -35,6 +41,7 @@ nav {
     margin: 0;
     padding: 0;
     justify-content: center;
+    background-color: #2c2c2c; /* Fondo gris para el menú en pantallas grandes */
 }
 
 #menu li {
@@ -56,17 +63,22 @@ nav {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block; /* Muestra el botón hamburguesa en pantallas pequeñas */
+        position: fixed; /* Lo mantenemos fijo en la parte superior */
+        top: 15px; /* Lo dejamos en la parte superior */
+        left: 15px; /* Y alineado a la izquierda */
+        z-index: 100;
     }
 
     #menu {
         display: none; /* Oculta el menú por defecto */
-        position: absolute;
-        top: 60px; /* Ajusta según el tamaño del menú */
+        position: absolute; /* Posicionamos el menú de forma fija */
+        top: 60px; /* El menú se coloca justo debajo del botón */
+        left: 0;
         right: 0;
         background-color: #333;
-        width: 100%;
         text-align: center;
-        z-index: 100;
+        z-index: 99;
+        border-radius: 5px;
     }
 
     #menu li {
@@ -77,12 +89,14 @@ nav {
         display: block; /* Muestra el menú cuando tiene la clase 'show' */
     }
 }
+
 /* Encabezado */
 header {
     background-color: #2c2c2c;
     padding: 2rem;
     text-align: center;
 }
+
 header h1 {
     color: #9b59b6;
     font-size: 2.5rem;
@@ -94,6 +108,7 @@ header h1 {
     color: #9b59b6;
     margin-top: 1.5rem;
 }
+
 .categoria {
     margin: 2rem auto;
     padding: 1rem;
@@ -101,6 +116,7 @@ header h1 {
     border-radius: 8px;
     width: 80%;
 }
+
 .categoria h3 {
     color: #9b59b6;
     margin-bottom: 0.5rem;
@@ -114,6 +130,7 @@ header h1 {
     border-radius: 8px;
     text-align: center;
 }
+
 .producto-img {
     max-width: 100%;
     height: auto;
@@ -137,24 +154,25 @@ header h1 {
         width: 90%;
     }
 }
+
 /* Estilo para la sección de contacto */
 .contacto {
-    text-align: center; /* Centra el texto */
-    margin-top: 50px; /* Espaciado superior */
+    text-align: center;
+    margin-top: 50px;
 }
 
 .contacto h2 {
-    font-size: 2.5rem; /* Aumentar el tamaño del título */
+    font-size: 2.5rem;
     color: #9b59b6;
 }
 
 .contacto p {
-    font-size: 1.5rem; /* Aumentar el tamaño del texto */
+    font-size: 1.5rem;
     color: #e0e0e0;
 }
 
 .contacto a {
-    color: #9b59b6; /* Color para los enlaces */
+    color: #9b59b6;
     text-decoration: none;
     font-weight: bold;
 }
@@ -164,7 +182,7 @@ header h1 {
 }
 
 .contacto i {
-    margin-left: 10px; /* Espaciado entre el texto y el icono */
+    margin-left: 10px;
 }
 
 /* Estilo para la sección de productos */

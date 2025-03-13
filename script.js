@@ -7,6 +7,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 
+
 // Cargar los productos desde el archivo JSON
 const cargarProductos = async () => {
     try {
