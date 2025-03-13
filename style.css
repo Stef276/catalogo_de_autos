@@ -7,92 +7,77 @@ body {
     color: #e0e0e0;
 }
 
-/* Menú de navegación */
+/* Estilo para el menú hamburguesa */
 nav {
-    background-color: #333;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 }
 
-nav ul {
+.menu-toggle {
+    display: none; /* Ocultamos el menú hamburguesa en pantallas grandes */
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 4px auto;
+}
+
+/* Menú */
+#menu {
     display: flex;
-    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
-nav ul li {
+#menu li {
     margin: 0 1rem;
 }
 
-nav ul li a {
+#menu li a {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #9b59b6; /* Violeta */
+#menu li a:hover {
+    color: #9b59b6;
 }
 
-/* Menú hamburguesa */
-.menu-hamburguesa {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 4px;
-    width: 30px;
-    height: 21px;
-    justify-content: space-between;
-}
-
-.menu-hamburguesa .barra {
-    height: 4px;
-    background-color: #e0e0e0;
-    border-radius: 2px;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.menu li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.menu li a:hover {
-    color: #9b59b6; /* Violeta */
-}
-
-/* Menu hamburguesa en dispositivos pequeños */
+/* Estilo del menú hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        align-items: center;
+    .menu-toggle {
+        display: block; /* Muestra el botón hamburguesa en pantallas pequeñas */
+    }
+
+    #menu {
+        display: none; /* Oculta el menú por defecto */
+        position: absolute;
+        top: 60px; /* Ajusta según el tamaño del menú */
+        right: 0;
         background-color: #333;
         width: 100%;
-        padding: 1rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: 10;
+        text-align: center;
+        z-index: 100;
     }
-    .menu.active {
-        display: flex;
+
+    #menu li {
+        margin: 1rem 0;
+    }
+
+    #menu.show {
+        display: block; /* Muestra el menú cuando tiene la clase 'show' */
     }
 }
+
 
 /* Encabezado */
 header {

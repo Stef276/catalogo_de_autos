@@ -1,10 +1,11 @@
 // JavaScript para el menú hamburguesa
-const menuHamburguesa = document.getElementById('menu-hamburguesa');
+const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
-menuHamburguesa.addEventListener('click', () => {
-    menu.classList.toggle('active');
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Alterna la clase 'show' para mostrar/ocultar el menú
 });
+
 
 // Cargar los productos desde el archivo JSON
 const cargarProductos = async () => {
