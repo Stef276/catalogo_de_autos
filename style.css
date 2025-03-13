@@ -7,88 +7,81 @@ body {
     color: #e0e0e0;
 }
 
-/* Estilo para el menú hamburguesa */
+/* Estilo general para el menú */
 nav {
     position: relative;
-    background-color: #2c2c2c; /* Fondo gris para pantallas grandes */
-}
-
-.menu-toggle {
-    display: none; /* Ocultamos el botón hamburguesa en pantallas grandes */
-    cursor: pointer;
+    background-color: #2c2c2c;
     padding: 10px;
-    background-color: #333;
-    border-radius: 5px;
-    position: absolute; /* Aseguramos que esté dentro del contenedor */
-    top: 15px; /* Ajusta según sea necesario */
-    right: 15px; /* Colocamos el botón a la derecha */
+  }
+  
+  .menu-toggle {
+    display: none; /* Ocultar el botón por defecto en pantallas grandes */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     z-index: 100;
-}
-
-.menu-toggle .barra {
+  }
+  
+  .menu-toggle .barra {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #e0e0e0;
-    margin: 4px auto;
-}
-
-/* Menú */
-#menu {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0;
+  }
+  
+  /* Menú */
+  #menu {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     justify-content: center;
-    background-color: #2c2c2c; /* Fondo gris para el menú en pantallas grandes */
-}
-
-#menu li {
+    background-color: #333;
+  }
+  
+  #menu li {
     margin: 0 1rem;
-}
-
-#menu li a {
-    color: #e0e0e0;
+  }
+  
+  #menu li a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-#menu li a:hover {
+    padding: 10px;
+  }
+  
+  #menu li a:hover {
     color: #9b59b6;
-}
-
-/* Estilo del menú hamburguesa en pantallas pequeñas */
-@media (max-width: 768px) {
+  }
+  
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Muestra el botón hamburguesa en pantallas pequeñas */
-        position: fixed; /* Lo mantenemos fijo en la parte superior */
-        top: 15px; /* Lo dejamos en la parte superior */
-        left: 15px; /* Y alineado a la izquierda */
-        z-index: 100;
+      display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
     }
 
     #menu {
-        display: none; /* Oculta el menú por defecto */
-        position: fixed; /* Posicionamos el menú de forma fija */
-        top: 60px; /* El menú se coloca justo debajo del botón */
-        left: 0;
-        right: 0;
-        background-color: #333;
-        text-align: center;
-        z-index: 99;
-        border-radius: 5px;
+      display: none; /* Ocultar el menú inicialmente */
+      flex-direction: column; /* Hacer que el menú se vea vertical */
+    position: absolute;
+      top: 60px; /* Ajusta según sea necesario */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    text-align: center;
+    z-index: 99;
     }
-
     #menu li {
-        margin: 1rem 0;
+    margin: 1rem 0;
     }
-
     #menu.show {
-        display: block; /* Muestra el menú cuando tiene la clase 'show' */
+      display: flex; /* Mostrar el menú cuando tenga la clase 'show' */
     }
-}
-
+}  
 /* Encabezado */
 header {
     background-color: #2c2c2c;
