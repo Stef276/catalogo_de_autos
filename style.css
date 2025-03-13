@@ -7,22 +7,16 @@ body {
     color: #e0e0e0;
 }
 
-/* Estilo general para el menú */
-nav {
-    position: relative;
-    background-color: #2c2c2c;
-    padding: 10px;
-  }
-  
-  .menu-toggle {
-    display: none; /* Ocultar el botón por defecto en pantallas grandes */
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar el botón en pantallas grandes */
     cursor: pointer;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 100;
+    top: 20px; /* Ajuste la posición si es necesario */
+    right: 20px;
+    z-index: 100; /* Asegúrate de que el botón esté encima del contenido */
   }
   
   .menu-toggle .barra {
@@ -33,7 +27,7 @@ nav {
     margin: 5px 0;
   }
   
-  /* Menú */
+  /* Estilos del menú */
   #menu {
     display: flex;
     list-style: none;
@@ -50,38 +44,35 @@ nav {
   #menu li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
     padding: 10px;
   }
   
-  #menu li a:hover {
-    color: #9b59b6;
-  }
-  
-    /* Estilos para pantallas pequeñas */
-    @media (max-width: 768px) {
+  /* Estilo para el menú en dispositivos pequeños */
+  @media (max-width: 768px) {
     .menu-toggle {
-      display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
+      display: block; /* Mostrar el botón en pantallas pequeñas */
     }
-
+  
     #menu {
       display: none; /* Ocultar el menú inicialmente */
-      flex-direction: column; /* Hacer que el menú se vea vertical */
-    position: absolute;
+      flex-direction: column;
+      position: absolute;
       top: 60px; /* Ajusta según sea necesario */
-    left: 0;
-    right: 0;
-    background-color: #333;
-    text-align: center;
-    z-index: 99;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      text-align: center;
+      z-index: 99;
     }
+  
     #menu li {
-    margin: 1rem 0;
+      margin: 1rem 0;
     }
+  
     #menu.show {
       display: flex; /* Mostrar el menú cuando tenga la clase 'show' */
     }
-}  
+  }
 /* Encabezado */
 header {
     background-color: #2c2c2c;
