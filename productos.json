@@ -24,21 +24,23 @@
             "nombre": "Shampoo Concentrado",
             "descripcion": "Limpieza profunda con alto poder desengrasante.",
             "precio": "$650",
-            "imagen": "./img/shampoo.jpg"
+            "imagen": [
+                "imagenes/kit-anodizadas.jpeg"
+            ]
         }
     ],
     "productosGenerales": [
         {
-            "nombre": "Ambientador de Autos",
-            "descripcion": "Deja tu vehículo con un aroma fresco.",
+            "nombre": "Arandelas y tornillos anodizados",
+            "descripcion": "mejora la estetica de tu vehiculo.",
             "precio": "$150",
-            "imagen": "./img/ambientador.jpg"
+            "imagen": "imagenes/kit-anodizadas.jpeg"
         },
         {
             "nombre": "Guantes de Protección",
             "descripcion": "Guantes resistentes para manejar productos de limpieza.",
             "precio": "$120",
-            "imagen": "./img/guantes.jpg"
+            "imagen": "imagenes/cinta-remolque.jpeg"
         }
     ],
     "accesoriosVehiculo": [
@@ -49,10 +51,16 @@
             "imagen": "./img/soporte_telefono.jpg"
         },
         {
-            "nombre": "Funda de Asiento",
-            "descripcion": "Protege los asientos de tu coche con estas fundas de alta calidad.",
+            "nombre": "Fusibles",
+            "descripcion": "Fusibles desde 7,5A hasta los 30A.",
             "precio": "$500",
-            "imagen": "./img/funda_asiento.jpg"
+            "imagen": "imagenes/fusibles.jpeg"
+        },
+        {
+            "nombre": "cinta para remolque",
+            "descripcion": "El accesorio perfecto para remolcar vechiculos.",
+            "precio": "$500",
+            "imagen": "imagenes/cinta-remolque.jpeg"
         }
     ]
 }

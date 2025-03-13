@@ -6,8 +6,6 @@ menuToggle.addEventListener('click', () => {
     menu.classList.toggle('show'); // Alterna la clase 'show' para mostrar/ocultar el menú
 });
 
-
-
 // Cargar los productos desde el archivo JSON
 const cargarProductos = async () => {
     try {
@@ -55,7 +53,7 @@ let productos = [];
 
 // Función para mostrar un producto aleatorio cada cierto tiempo
 function mostrarProductoAleatorio(data) {
-    productos = data.limpiezaInterior.concat(data.cuidadoExterior, data.productosGenerales, data.accesorios); // Agregar todas las categorías
+    productos = data.limpiezaInterior.concat(data.cuidadoExterior, data.productosGenerales, data.accesoriosVehiculo); // Agregar todas las categorías
 
     let currentProductIndex = 0;
     
@@ -67,7 +65,7 @@ function mostrarProductoAleatorio(data) {
         // Crear el contenido del producto
         productoContainer.innerHTML = `
             <div class="producto-imagen">
-                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
             </div>
             <div class="producto-descripcion">
                 <h3>${producto.nombre}</h3>
