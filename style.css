@@ -19,11 +19,10 @@ nav {
     padding: 10px;
     background-color: #333;
     border-radius: 5px;
-    position: fixed; /* Fijamos el botón en la parte superior */
+    position: absolute; /* Aseguramos que esté dentro del contenedor */
     top: 15px; /* Ajusta según sea necesario */
     right: 15px; /* Colocamos el botón a la derecha */
     z-index: 100;
-    margin: 0;
 }
 
 .menu-toggle .barra {
@@ -71,7 +70,7 @@ nav {
 
     #menu {
         display: none; /* Oculta el menú por defecto */
-        position: absolute; /* Posicionamos el menú de forma fija */
+        position: fixed; /* Posicionamos el menú de forma fija */
         top: 60px; /* El menú se coloca justo debajo del botón */
         left: 0;
         right: 0;
