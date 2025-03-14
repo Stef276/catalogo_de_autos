@@ -16,20 +16,20 @@ body {
 }
 
 .logo img {
-    height: 50px; /* Ajusta el tamaño según tu preferencia */
+    height: 50px;
     width: auto;
 }
 
 /* Estilo del botón hamburguesa */
 .menu-toggle {
-    display: none; /* Ocultar el botón en pantallas grandes */
+    display: none;
     cursor: pointer;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 20px; /* Ajuste la posición si es necesario */
+    top: 20px;
     right: 20px;
-    z-index: 100; /* Asegúrate de que el botón esté encima del contenido */
+    z-index: 100;
 }
 
 .menu-toggle .barra {
@@ -60,30 +60,24 @@ body {
     padding: 10px;
 }
 
-/* Estilo para el menú en dispositivos pequeños */
+/* Menú en dispositivos pequeños */
 @media (max-width: 768px) {
     .menu-toggle {
-      display: block; /* Mostrar el botón en pantallas pequeñas */
+        display: block;
     }
-
     #menu {
-        display: none; /* Ocultar el menú inicialmente */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Ajusta según sea necesario */
+        top: 60px;
         left: 0;
         right: 0;
         background-color: #333;
         text-align: center;
         z-index: 99;
     }
-
-    #menu li {
-        margin: 1rem 0;
-    }
-
     #menu.show {
-      display: flex; /* Mostrar el menú cuando tenga la clase 'show' */
+        display: flex;
     }
 }
 
@@ -99,7 +93,7 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Sección de catálogo */
+/* Catálogo */
 #catalogo h2 {
     text-align: center;
     color: #2210e2;
@@ -126,33 +120,28 @@ header h1 {
     margin: 0.5rem;
     border-radius: 8px;
     text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .producto-img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
-    .categoria {
-        width: 95%;
-    }
+@media (max-width: 376px) {
     .producto {
+        width: 95%;
         margin: 1rem auto;
-        width: 90%;
     }
 }
 
-/* Estilo para la sección de contacto */
+/* Contacto */
 .contacto {
     text-align: center;
     margin-top: 50px;
@@ -163,26 +152,16 @@ header h1 {
     color: #2210e2;
 }
 
-.contacto p {
+.contacto p, .contacto a {
     font-size: 1.5rem;
     color: #e0e0e0;
-}
-
-.contacto a {
-    color: #2210e2;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .contacto a:hover {
     text-decoration: underline;
 }
 
-.contacto i {
-    margin-left: 10px;
-}
-
-/* Estilo para la sección de productos */
+/* Producto Actual */
 #producto-actual {
     text-align: center;
     margin-top: 2rem;
@@ -198,72 +177,4 @@ header h1 {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-}
-
-/* Estilos generales */
-/* Estilos generales de las imágenes */
-.producto-img {
-    width: 100%;         /* Aseguramos que las imágenes se ajusten al ancho del contenedor */
-    height: 200px;       /* Puedes ajustar la altura para que se vea más cuadrada */
-    object-fit: cover;   /* Esto asegura que la imagen cubra el área sin deformarse */
-    border-radius: 4px;  /* Bordes redondeados si lo deseas */
-}
-
-/* Estilo para la sección de productos */
-.producto {
-    background-color: #333;
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 100%; /* Aseguramos que el contenedor no sobrepase el ancho */
-    box-sizing: border-box;
-}
-
-/* Diseño responsive */
-@media (max-width: 376px) {
-    .producto {
-        width: 95%; /* Aseguramos que los productos se ajusten a pantallas pequeñas */
-        margin: 1rem auto; /* Añadimos márgenes adecuados */
-    }
-}
-
-/* Estilos generales de las imágenes */
-.producto-img {
-    width: 100%;         /* Aseguramos que las imágenes se ajusten al ancho del contenedor */
-    height: 200px;       /* Puedes ajustar la altura para que se vea más cuadrada */
-    object-fit: cover;   /* Esto asegura que la imagen cubra el área sin deformarse */
-    border-radius: 4px;  /* Bordes redondeados si lo deseas */
-}
-
-.producto-descripcion {
-    flex: 1;
-    padding: 1rem;
-    color: #e0e0e0;
-    text-align: left;
-}
-
-.producto-descripcion h3 {
-    font-size: 2rem;
-    color: #2210e2;
-    margin-bottom: 1rem;
-}
-
-.producto-descripcion p {
-    font-size: 1.2rem;
-}
-
-.producto-descripcion strong {
-    font-weight: bold;
-}
-
-/* Estilo solo para las imágenes dentro de la página index.html */
-#index-page #producto-container .producto-img {
-    width: 100%;         /* Aseguramos que las imágenes se ajusten al ancho del contenedor */
-    height: auto;        /* Mantiene la relación de aspecto */
-    object-fit: cover;   /* Esto asegura que la imagen cubra el área sin deformarse */
-    max-height: 250px;   /* Limita la altura máxima para que no se sobrepasen */
-    border-radius: 8px;  /* Bordes redondeados */
-    display: block;
-    margin: 0 auto;      /* Centra la imagen */
 }
